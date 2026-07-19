@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     
-    <!-- ===== MANIFEST PARA PWA ===== -->
-    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIk1BUlMgTWFudXRlbsOnw6NvIiwKICAic2hvcnRfbmFtZSI6ICJNQVJTIiwKICAiZGVzY3JpcHRpb24iOiAiU2lzdGVtYSBkZSBNYW51dGVuw6fDo28gZSBBbGVydGFzIiwKICAic3RhcnRfdXJsIjogIi8iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMxMjEyMTIiLAogICJ0aGVtZV9jb2xvciI6ICIjZmYzYjMwIiwKICAiaWNvbnMiOiBbCiAgICB7CiAgICAgICJzcmMiOiAiZGF0YTppbWFnZS9zdmcreG1sLCUzQ3N2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA1MTIgNTEyJyUzRSUzQ3JlY3Qgd2lkdGg9JzUxMicgaGVpZ2h0PSc1MTInIHJ4PSc1MCcgZmlsbD0nJTIzMTIxMjEyJy8lM0UlM0NjaXJjbGUgY3g9JzI1NicgY3k9JzI1Nicgcj0nODAnIGZpbGw9JyUyM2ZmM2IzMCcvJTNFJTNDY2lyY2xlIGN4PScyNTYnIGN5PScyNTYnIHI9JzQwJyBmaWxsPSclMjNmZmZmZmYnLyUzRSUzQ3RleHQgeD0nMjU2JyB5PScyODAnIGZvbnQtc2l6ZT0nODAnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGZpbGw9JyUyM2ZmZmZmZiclM0VNJTNDL3RleHQlM0UlM0Mvc3ZnJTNFIiwKICAgICAgInNpemVzIjogIjUxMHg1MTIiLAogICAgICAidHlwZSI6ICJpbWFnZS9zdmcreG1sIgogICAgfQogIF0KfQ==" />
+    <!-- ===== MANIFEST COM A NOVA LOGO ===== -->
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIk1BUlMgLSBNYW51dGVuw6fDo28iLAogICJzaG9ydF9uYW1lIjogIk1BUlMiLAogICJkZXNjcmlwdGlvbiI6ICJTaXN0ZW1hIGRlIE1hbnV0ZW7Dp8OjbyBlIEFsZXJ0YXMiLAogICJzdGFydF91cmwiOiAiLyIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiIzEyMTIxMiIsCiAgInRoZW1lX2NvbG9yIjogIiNmZjNiMzAiLAogICJpY29ucyI6IFsKICAgIHsKICAgICAgInNyYyI6ICJpY29uLnBuZyIsCiAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgfSwKICAgIHsKICAgICAgInNyYyI6ICJpY29uLnBuZyIsCiAgICAgICJzaXplcyI6ICI1MTJ4NTEyIiwKICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgfQogIF0KfQ==" />
+
+    <!-- ===== SEO E METAS ===== -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="MARS" />
+    <meta name="description" content="Sistema de Manutenção e Alertas Industriais" />
     
     <title>M.A.R.S. - Manutenção</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -42,7 +48,6 @@
             flex-direction: column;
         }
 
-        /* ===== O RESTO DO SEU CSS AQUI (MANTENHA O MESMO DE SEMPRE) ===== */
         .status-bar {
             padding: 12px 20px 4px 20px;
             display: flex;
@@ -1232,7 +1237,6 @@
 </head>
 <body>
 
-    <!-- ===== TODO O SEU HTML AQUI (MANTENHA O MESMO DE SEMPRE) ===== -->
     <div class="app-container" id="appContainer">
 
         <div class="status-bar">
@@ -2488,7 +2492,7 @@
             }
 
             atualizarTudo();
-            console.log('M.A.R.S. iniciado!');
+            console.log('M.A.R.S. iniciado com a nova logo!');
 
         })();
     </script>
