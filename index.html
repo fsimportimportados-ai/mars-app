@@ -1,25 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <title>M.A.R.S</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js"></script><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'><link rel="stylesheet" href="./style.css">
-
-  </head>
-    
-  <body>
-  <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>M.A.R.S. - Sistema de Manutenção</title>
+    
+    <!-- ===== MANIFEST PARA PWA ===== -->
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIk1BUlMgTWFudXRlbsOnw6NvIiwKICAic2hvcnRfbmFtZSI6ICJNQVJTIiwKICAiZGVzY3JpcHRpb24iOiAiU2lzdGVtYSBkZSBNYW51dGVuw6fDo28gZSBBbGVydGFzIiwKICAic3RhcnRfdXJsIjogIi8iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMxMjEyMTIiLAogICJ0aGVtZV9jb2xvciI6ICIjZmYzYjMwIiwKICAiaWNvbnMiOiBbCiAgICB7CiAgICAgICJzcmMiOiAiZGF0YTppbWFnZS9zdmcreG1sLCUzQ3N2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA1MTIgNTEyJyUzRSUzQ3JlY3Qgd2lkdGg9JzUxMicgaGVpZ2h0PSc1MTInIHJ4PSc1MCcgZmlsbD0nJTIzMTIxMjEyJy8lM0UlM0NjaXJjbGUgY3g9JzI1NicgY3k9JzI1Nicgcj0nODAnIGZpbGw9JyUyM2ZmM2IzMCcvJTNFJTNDY2lyY2xlIGN4PScyNTYnIGN5PScyNTYnIHI9JzQwJyBmaWxsPSclMjNmZmZmZmYnLyUzRSUzQ3RleHQgeD0nMjU2JyB5PScyODAnIGZvbnQtc2l6ZT0nODAnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGZpbGw9JyUyM2ZmZmZmZiclM0VNJTNDL3RleHQlM0UlM0Mvc3ZnJTNFIiwKICAgICAgInNpemVzIjogIjUxMHg1MTIiLAogICAgICAidHlwZSI6ICJpbWFnZS9zdmcreG1sIgogICAgfQogIF0KfQ==" />
+    
+    <title>M.A.R.S. - Manutenção</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js"></script>
     <style>
-        /* ===== TODO O CSS AQUI (mesmo de antes) ===== */
+        /* ===== TODO O SEU CSS AQUI (MANTENHA O MESMO DE SEMPRE) ===== */
         * {
             margin: 0;
             padding: 0;
@@ -50,6 +42,7 @@
             flex-direction: column;
         }
 
+        /* ===== O RESTO DO SEU CSS AQUI (MANTENHA O MESMO DE SEMPRE) ===== */
         .status-bar {
             padding: 12px 20px 4px 20px;
             display: flex;
@@ -1239,6 +1232,7 @@
 </head>
 <body>
 
+    <!-- ===== TODO O SEU HTML AQUI (MANTENHA O MESMO DE SEMPRE) ===== -->
     <div class="app-container" id="appContainer">
 
         <div class="status-bar">
@@ -1255,7 +1249,7 @@
 
         <div class="app-content" id="appContent">
 
-            <!-- ===== TELA DE LOGIN (SEM EXEMPLOS) ===== -->
+            <!-- TELA DE LOGIN -->
             <div class="screen active" id="loginScreen">
                 <div class="login-screen">
                     <div class="logo">M.A.R.S.</div>
@@ -1274,7 +1268,6 @@
 
                     <button class="login-btn" id="loginBtn"><i class="fas fa-arrow-right"></i> ENTRAR</button>
 
-                    <!-- ===== AVISO DE ACESSOS (APENAS INFORMATIVO) ===== -->
                     <div style="margin-top:20px; color:#444; font-size:11px; text-align:center; max-width:280px; border-top:1px solid #222; padding-top:16px;">
                         <div style="color:#666; margin-bottom:4px;">🔑 Acessos disponíveis:</div>
                         <div style="color:#888;">Administrador: entre em contato com o suporte</div>
@@ -1283,7 +1276,7 @@
                 </div>
             </div>
 
-            <!-- ===== RESTANTE DO APP (mesmo de antes) ===== -->
+            <!-- TELA PAINEL -->
             <div class="screen" id="painelScreen">
                 <div class="page-title">
                     <i class="fas fa-chart-pie"></i> Painel
@@ -1301,6 +1294,7 @@
                 <div class="os-list" id="osList"></div>
             </div>
 
+            <!-- TELA TÉCNICO -->
             <div class="screen" id="tecnicoScreen">
                 <div class="tec-header">
                     <div class="avatar" id="tecAvatar">J</div>
@@ -1323,6 +1317,7 @@
                 <div id="manutencoesList"></div>
             </div>
 
+            <!-- TELA TÉCNICOS (ADMIN) -->
             <div class="screen" id="tecnicosScreen">
                 <div class="page-title">
                     <i class="fas fa-users" style="color:#ff3b30;"></i> Técnicos
@@ -1360,6 +1355,7 @@
                 </div>
             </div>
 
+            <!-- TELA MÁQUINAS (ADMIN) -->
             <div class="screen" id="maquinasAdminScreen">
                 <div class="page-title">
                     <i class="fas fa-cog" style="color:#ff3b30;"></i> Máquinas
@@ -1397,6 +1393,7 @@
                 </div>
             </div>
 
+            <!-- TELA REGISTROS (ADMIN) -->
             <div class="screen" id="registrosScreen">
                 <div class="page-title">
                     <i class="fas fa-clipboard-list" style="color:#ff9500;"></i> Registros
@@ -1450,6 +1447,7 @@
                 </div>
             </div>
 
+            <!-- TELA MÁQUINAS (VISUALIZAR) -->
             <div class="screen" id="maquinasScreen">
                 <div class="page-title">
                     <i class="fas fa-microchip"></i> Máquinas
@@ -1459,6 +1457,7 @@
                 <div id="maquinasList"></div>
             </div>
 
+            <!-- TELA EQUIPE -->
             <div class="screen" id="equipeScreen">
                 <div class="page-title">
                     <i class="fas fa-user-check"></i> Equipe
@@ -1468,6 +1467,7 @@
                 <div id="equipeList"></div>
             </div>
 
+            <!-- TELA PREVENTIVA -->
             <div class="screen" id="preventivaScreen">
                 <div class="page-title">Manutenção Preventiva</div>
                 <div class="subtitle">
@@ -1496,6 +1496,7 @@
             </div>
         </div>
 
+        <!-- MENU INFERIOR -->
         <div class="bottom-nav" id="bottomNav" style="display:none;">
             <button class="nav-item active" data-screen="painelScreen" id="navPainel">
                 <i class="fas fa-chart-pie"></i> Painel
@@ -1524,6 +1525,7 @@
             </button>
         </div>
 
+        <!-- ALERTA -->
         <div class="alerta-overlay" id="alertaOverlay">
             <div class="alerta-box">
                 <div class="alerta-icon"><i class="fas fa-exclamation-circle"></i></div>
@@ -1540,6 +1542,7 @@
             </div>
         </div>
 
+        <!-- MODAL MANUTENÇÃO -->
         <div class="modal-overlay" id="modalManutencao">
             <div class="modal-box">
                 <h3><i class="fas fa-tools" style="color:#ff9500;"></i> Manutenção</h3>
@@ -1566,7 +1569,7 @@
     </div>
 
     <script>
-        // ===== TODO O JAVASCRIPT AQUI (mesmo de antes) =====
+        // ===== TODO O SEU JAVASCRIPT AQUI (MANTENHA O MESMO DE SEMPRE) =====
         (function() {
             const MQTT_CONFIG = {
                 host: 'eed508fe3744494f856f3b7daabb95d6.s1.eu.hivemq.cloud',
@@ -2485,15 +2488,10 @@
             }
 
             atualizarTudo();
-            console.log('M.A.R.S. iniciado! Os campos de login estão vazios por segurança.');
+            console.log('M.A.R.S. iniciado!');
 
         })();
     </script>
 
 </body>
-</html>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js'></script><script  src="./script.js"></script>
-
-  </body>
-  
 </html>
